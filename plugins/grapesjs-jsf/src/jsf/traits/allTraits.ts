@@ -22,8 +22,9 @@ export default {
         name: 'title',
         label: i18next.t("title", { ns: "traits"})
     },
-    value: {
+    textValue: {
         name: 'value',
+        type: 'textExpression',
         label: i18next.t("value", { ns: "traits"})
     },
     required: {
@@ -42,5 +43,45 @@ export default {
     ajax: {
         name: 'ajax',
         label: i18next.t("ajax", { ns: "traits"})
-    }
+    },
+    listener: {
+        name: "listener",
+        label: i18next.t("listener", { ns: "traits"})
+    },
+    type: {
+        name: 'type',
+        label: i18next.t("type", { ns: "traits"})
+    },
+    data: {
+        name: 'data',
+        label: i18next.t("data", { ns: "traits"})
+    },
+    process: {
+        name: 'process',
+        label: i18next.t("process", { ns: "traits"})
+    },
+    update: {
+        name: 'update',
+        label: i18next.t("update", { ns: "traits"})
+    },
+    event: {
+        name: 'event',
+        label: i18next.t("event", { ns: "traits"})
+    },
+    oncomplete: {
+        name: 'oncomplete',
+        label: i18next.t("oncomplete", { ns: "traits"})
+    },
+    value: {
+        name: 'value',
+        label: i18next.t("value", { ns: "traits"})
+    },
+    selectionMode: {
+        name: 'selectionMode',
+        label: i18next.t("selectionMode", { ns: "traits"})
+    },
+    selection: {
+        name: 'selection',
+        label: i18next.t("selection", { ns: "traits"})
+    },
 };

@@ -9,4 +9,8 @@ export default {
         name: "jsfContainers",
         label: i18next.t("groups.containers",{ns: "blocks"})
     },
+    // jsfContainers: {
+    //     name: "jsfContainers",
+    //     label: i18next.t("groups.containers",{ns: "blocks"})
+    // },
 };

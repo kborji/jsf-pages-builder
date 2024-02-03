@@ -6,11 +6,15 @@ interface Resources {
     },
     "components": {
       "form": "Form",
-      "input_text": "Input Text"
+      "input_text": "Input Text",
+      "ajax": "ajax",
+      "dataTable": "Datatable"
     }
   },
   "common": {
-    "test": "test message"
+    "test": "test message",
+    "ok": "Ok",
+    "calcel": "Cancel"
   },
   "traits": {
     "id": "ID",
@@ -22,7 +26,23 @@ interface Resources {
     "title": "Title",
     "rendered": "Rendered",
     "disabled": "Disabled",
-    "ajax": "Ajax"
+    "expression": "Expression",
+    "ajax": "Ajax",
+    "type": "Type",
+    "listener": "Listener",
+    "data": "Data",
+    "process": "Process",
+    "update": "Update",
+    "event": "event",
+    "oncomplete": "oncomplete",
+    "selectionMode": "Selection Mode",
+    "selection": "Selection",
+    "traitTypes": {
+      "expression": {
+        "modalTitle": "Insert your expression here ...",
+        "modalTextAreaPlaceholder": "Insert your expression here ..."
+      }
+    }
   }
 }
 

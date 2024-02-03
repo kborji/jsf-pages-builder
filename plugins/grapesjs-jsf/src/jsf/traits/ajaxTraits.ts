@@ -9,5 +9,12 @@ export default [
     all.disabled,
     all.rendered,
     all.required,
-    all.ajax
+    all.ajax,
+    all.listener,
+    all.type,
+    all.data,
+    all.process,
+    all.update,
+    all.event,
+    all.oncomplete
 ];

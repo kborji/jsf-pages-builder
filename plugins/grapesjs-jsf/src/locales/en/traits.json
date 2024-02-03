@@ -8,5 +8,21 @@
     "title": "Title",
     "rendered": "Rendered",
     "disabled": "Disabled",
-    "ajax": "Ajax"
+    "expression": "Expression",
+    "ajax": "Ajax",
+    "type": "Type",
+    "listener": "Listener",
+    "data": "Data",
+    "process": "Process",
+    "update": "Update",
+    "event": "event",
+    "oncomplete": "oncomplete",
+    "selectionMode": "Selection Mode",
+    "selection": "Selection",
+    "traitTypes" : {
+        "expression": {
+            "modalTitle": "Insert your expression here ...",
+            "modalTextAreaPlaceholder": "Insert your expression here ..."
+        }
+    }
 }

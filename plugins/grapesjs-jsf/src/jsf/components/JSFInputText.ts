@@ -1,15 +1,15 @@
-import type { ComponentManager, Editor } from 'grapesjs';
+import type { Component, ComponentManager, Editor } from 'grapesjs';
 import traits from '../traits/inputTextTraits';
 import categories from '../../blockCategories';
 import i18next from '../../i18n';
 import { ComponentBuilder } from '../../model/ComponentBuilder';
 
 class InputTextBuilder extends ComponentBuilder {
-    
+
     constructor() {
-        super("jsfInputText", i18next.t("components.input_text",{ns: "blocks"}));
+        super("jsfInputText", i18next.t("components.input_text", { ns: "blocks" }));
     }
-    
+
     protected addComponentBlock(editor: Editor): void {
         const category = categories.jsfForms;
         editor.BlockManager.add('h:inputText', {
@@ -19,6 +19,13 @@ class InputTextBuilder extends ComponentBuilder {
             category: category.name,
             content: `<h:inputText data-gjs-type="${this._typeName}" class="form-control"></h:inputText>`,
         });
+        editor.on('block:drag:stop', (component: Component, block) => {
+            if (component) {
+                console.log(component.attributes.parent.attributes.type);
+            }
+        });
+
+        
     }
     protected defineComponentType(editor: Editor): void {
         const { Components } = editor;
@@ -31,7 +38,7 @@ class InputTextBuilder extends ComponentBuilder {
             extend: 'input',
             model: {
                 defaults: {
-                    ...defaultModel.prototype.defaults,
+                    ...defaultModel?.prototype?.defaults,
                     tagName: 'h:inputText',
                     'custom-name': this._label,
                     draggable: 'form, form *',
@@ -42,16 +49,7 @@ class InputTextBuilder extends ComponentBuilder {
             extendView: 'input',
             view: {
                 tagName: () => 'input',
-                attributes: {
-                    type: 'text',
-                },
             }
-            // extendFnView: ['updateAttributes'],
-            // {
-            //     updateAttributes() {
-            //         this.el.setAttribute('autocomplete', 'off');
-            //     },
-            // }
         });
     }
 

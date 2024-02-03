@@ -5,7 +5,9 @@
     },
     "components": {
         "form":"Form",
-        "input_text":"Input Text"
+        "input_text":"Input Text",
+        "ajax": "ajax",
+        "dataTable": "Datatable"
     }
 
 }

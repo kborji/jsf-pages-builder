@@ -48,10 +48,16 @@ module.exports = (env = {}) => {
                 //     loader: 'babel-loader',
                 //     include: /src/,
                 // }
-            ]
+            ],
+            noParse: [require.resolve("typescript/lib/typescript.js")],
+
         },
         resolve: {
-            extensions: [".tsx", ".ts", ".js"]
+            extensions: [".tsx", ".ts", ".js"],
+            fallback: {
+                "path": require.resolve("path-browserify")
+              },
+            //   target: 'node',
         },
         devServer: {
             port: 18080,
